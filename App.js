@@ -3,25 +3,16 @@ import { View, Text, StyleSheet } from "react-native";
 import { initializeApp } from "firebase/app";
 import { getFirestore, collection, getDocs } from "firebase/firestore";
 
-// const firebaseConfig = {
-//   apiKey: "AIzaSyB0bJ3M7VOvWqN2FvMtPws2do1jhonrYgE",
-//   authDomain: "cube-dev-4622e.firebaseapp.com",
-//   databaseURL: "https://cube-dev-4622e-default-rtdb.asia-southeast1.firebasedatabase.app",
-//   projectId: "cube-dev-4622e",
-//   storageBucket: "cube-dev-4622e.appspot.com",
-//   messagingSenderId: "427577704256",
-//   appId: "1:427577704256:web:fd3fd9effa978f0d5004a5",
-//   measurementId: "G-80YWW37TR5",
-// };
-
 const firebaseConfig = {
-    apiKey: "AIzaSyBWdrE9n0nWlfy2kEnD9-rwb4u_9FYPDQ4",
-    authDomain: "fir-expo-d9316.firebaseapp.com",
-    projectId: "fir-expo-d9316",
-    storageBucket: "fir-expo-d9316.appspot.com",
-    messagingSenderId: "467087330399",
-    appId: "1:467087330399:web:0c83ea542d0b54d8db9fea"
-    };
+  apiKey: "AIzaSyB0bJ3M7VOvWqN2FvMtPws2do1jhonrYgE",
+  authDomain: "cube-dev-4622e.firebaseapp.com",
+  databaseURL: "https://cube-dev-4622e-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "cube-dev-4622e",
+  storageBucket: "cube-dev-4622e.appspot.com",
+  messagingSenderId: "427577704256",
+  appId: "1:427577704256:web:fd3fd9effa978f0d5004a5",
+  measurementId: "G-80YWW37TR5",
+};
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
