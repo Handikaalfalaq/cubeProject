@@ -34,7 +34,7 @@ const App = () => {
           const userActionsRef = collection(db, "users", doc.id, "userAction");
           const userActionsSnapshot = await getDocs(userActionsRef);
 
-          console.log({ID: doc.id, totalAction:userActionsSnapshot.size})
+          console.log({'nama user': doc.id, 'total user Action':userActionsSnapshot.size})
 
           userActionsSnapshot.forEach((userActionDoc) => {
             const userActionData = userActionDoc.data();
