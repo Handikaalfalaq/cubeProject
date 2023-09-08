@@ -29,22 +29,28 @@ const App = () => {
         querySnapshot.forEach(async (doc) => {
           const userData = doc.data();
           setUsers((prev) => [...prev, userData]);
+          
 
           const userActionsRef = collection(db, "users", doc.id, "userAction");
           const userActionsSnapshot = await getDocs(userActionsRef);
+
+          console.log({ID: doc.id, totalAction:userActionsSnapshot.size})
 
           userActionsSnapshot.forEach((userActionDoc) => {
             const userActionData = userActionDoc.data();
             setUserAction((prev) => [...prev, userActionData]);
           });
+
+
         });
       } catch (error) {
         console.error("Error fetching data from Firestore: ", error);
       }
     };
-
+    console.log(users)
     fetchData();
   }, []);
+  
 
   return (
     <View style={styles.container}>
